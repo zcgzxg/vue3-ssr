@@ -15,4 +15,3 @@ declare global {
   }
   const __isBrowser__: Boolean
 }
-

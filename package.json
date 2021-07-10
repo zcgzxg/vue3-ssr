@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@nestjs/common": "^7.5.1",
-    "@nestjs/core": "^7.5.1",
-    "@nestjs/platform-express": "^7.5.1",
+    "koa": "^2.13.1",
+    "koa-static-server": "^1.5.2",
+    "ant-design-vue": "^2.2.1",
     "pm2": "^4.5.4",
     "ssr-core-vue3": "^5.0.0",
     "swiper": "^6.0.0",
@@ -18,12 +18,11 @@
     "ssr-types": "^5.0.0"
   },
   "devDependencies": {
-    "@nestjs/cli": "^7.5.5",
     "@types/serialize-javascript": "^1.5.0",
     "eslint-config-standard-vue-ts": "^1.0.5",
     "ssr": "^5.0.0",
     "ssr-plugin-vue3": "^5.0.0",
-    "ssr-plugin-nestjs": "^5.0.0",
+    "ts-node": "^10.0.0",
     "typescript": "^3.9.7",
     "webpack": "^4.0.0"
   },

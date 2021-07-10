@@ -1,21 +1,51 @@
-import { join } from 'path'
-import { NestFactory } from '@nestjs/core'
-import { NestExpressApplication } from '@nestjs/platform-express'
-import { initialSSRDevProxy, loadConfig, getCwd } from 'ssr-server-utils'
+import * as path from 'path'
+import * as Koa from 'koa'
+import * as StaticServe from 'koa-static-server'
+import { loadConfig, initialSSRDevProxy, getCwd } from 'ssr-server-utils'
+import { render } from 'ssr-core-vue3'
+import { Readable } from 'stream'
 
-import { AppModule } from './app.module'
+const app = new Koa()
+const config = loadConfig()
+const { serverPort, isDev } = config
+process.env.NODE_ENV = isDev ? 'development' : 'production'
 
-async function bootstrap (): Promise<void> {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule)
-  await initialSSRDevProxy(app, {
-    express: true
+async function boot () {
+  if (isDev) {
+    await initialSSRDevProxy(app, {
+      express: false
+    })
+  }
+
+  app.use(async (ctx, next) => {
+    if (!ctx.path.includes('.')) {
+      try {
+        const stream = await render<Readable>(ctx, { stream: true })
+        ctx.type = '.html'
+        ctx.body = stream
+      } catch (e) {
+        ctx.status = 500
+        ctx.body =
+          ((e as Error)?.message || 'no error message') +
+          '\n' +
+          (e as Error)?.stack
+      }
+    } else {
+      await next()
+    }
   })
-  app.useStaticAssets(join(getCwd(), './build'))
-  const { serverPort } = loadConfig()
-  await app.listen(serverPort)
+
+  app.use(
+    StaticServe({
+      rootDir: path.join(__dirname, '../public'),
+      rootPath: '/public'
+    })
+  )
+  app.use(StaticServe({ rootDir: path.join(getCwd(), './build') }))
+
+  app.listen(serverPort, () => {
+    console.log(`server is listening http://localhost:${serverPort}`)
+  })
 }
 
-bootstrap().catch(err => {
-  console.log(err)
-  process.exit(1)
-})
+boot().catch(console.error)
