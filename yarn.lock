@@ -1293,6 +1293,11 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-15.14.0.tgz#74dbf254fb375551a9d2a71faf6b9dbc2178dc53"
   integrity sha1-dNvyVPs3VVGp0qcfr2udvCF43FM=
 
+"@types/node@14":
+  version "14.17.5"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-14.17.5.tgz?cache=0&sync_timestamp=1626221012858&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.17.5.tgz#b59daf6a7ffa461b5648456ca59050ba8e40ed54"
+  integrity sha1-tZ2van/6RhtWSEVspZBQuo5A7VQ=
+
 "@types/q@^1.5.1":
   version "1.5.4"
   resolved "https://registry.nlark.com/@types/q/download/@types/q-1.5.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fq%2Fdownload%2F%40types%2Fq-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
@@ -9596,13 +9601,13 @@ sprintf-js@~1.0.2:
   resolved "https://registry.npm.taobao.org/sprintf-js/download/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
-ssr-client-utils@^5.5.61:
-  version "5.5.61"
-  resolved "https://registry.nlark.com/ssr-client-utils/download/ssr-client-utils-5.5.61.tgz#3c6454ef38fda4038379f5fdf3c0c61457a45ef1"
-  integrity sha1-PGRU7zj9pAODefX988DGFFekXvE=
+ssr-client-utils@^5.5.72:
+  version "5.5.72"
+  resolved "https://registry.nlark.com/ssr-client-utils/download/ssr-client-utils-5.5.72.tgz#18cccea398a9ed18a915cb0df11fdca52c35de91"
+  integrity sha1-GMzOo5ip7RipFcsN8R/cpSw13pE=
   dependencies:
     path-to-regexp "^6.2.0"
-    ssr-types "^5.5.61"
+    ssr-types "^5.5.72"
 
 ssr-core-vue3@^5.0.0:
   version "5.5.65"
@@ -9616,10 +9621,10 @@ ssr-core-vue3@^5.0.0:
     ssr-server-utils "^5.5.65"
     vue "^3.0.0"
 
-ssr-plugin-vue3@^5.0.0:
-  version "5.5.66"
-  resolved "https://registry.nlark.com/ssr-plugin-vue3/download/ssr-plugin-vue3-5.5.66.tgz#24de195a028f06c61bc6b20d1f1edea0e212a947"
-  integrity sha1-JN4ZWgKPBsYbxrINHx7eoOISqUc=
+ssr-plugin-vue3@^5.5.74:
+  version "5.5.74"
+  resolved "https://registry.nlark.com/ssr-plugin-vue3/download/ssr-plugin-vue3-5.5.74.tgz#5af8e6bc134681846266b416df8bf1dd0287cdd7"
+  integrity sha1-WvjmvBNGgYRiZrQW34vx3QKHzdc=
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-transform-runtime" "^7.9.6"
@@ -9645,10 +9650,10 @@ ssr-plugin-vue3@^5.0.0:
     postcss-loader "3.0.0"
     postcss-preset-env "^6.0.5"
     postcss-safe-parser "4.0.1"
-    ssr-client-utils "^5.5.61"
-    ssr-server-utils "^5.5.65"
-    ssr-types "^5.5.61"
-    ssr-webpack "^5.5.65"
+    ssr-client-utils "^5.5.72"
+    ssr-server-utils "^5.5.74"
+    ssr-types "^5.5.72"
+    ssr-webpack "^5.5.74"
     terser-webpack-plugin "^2.3.5"
     url-loader "1.1.1"
     vue "^3.0.0"
@@ -9674,6 +9679,20 @@ ssr-server-utils@^5.5.65:
     shelljs "^0.8.3"
     ssr-types "^5.5.61"
 
+ssr-server-utils@^5.5.74:
+  version "5.5.74"
+  resolved "https://registry.nlark.com/ssr-server-utils/download/ssr-server-utils-5.5.74.tgz?cache=0&sync_timestamp=1626442687694&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fssr-server-utils%2Fdownload%2Fssr-server-utils-5.5.74.tgz#3ab52192dfbd8074ea0822a1b2698c62eb10e988"
+  integrity sha1-OrUhkt+9gHTqCCKhsmmMYusQ6Yg=
+  dependencies:
+    axios "^0.21.1"
+    debug "^4.1.1"
+    http-proxy-middleware "^1.0.6"
+    koa2-connect "^1.0.2"
+    path-to-regexp "^6.2.0"
+    readable-stream "^3.6.0"
+    shelljs "^0.8.3"
+    ssr-types "^5.5.72"
+
 ssr-types@^5.0.0, ssr-types@^5.5.61:
   version "5.5.61"
   resolved "https://registry.nlark.com/ssr-types/download/ssr-types-5.5.61.tgz?cache=0&sync_timestamp=1624438729206&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fssr-types%2Fdownload%2Fssr-types-5.5.61.tgz#30b88b939f6bf711d0bfe566c8d92fb021c4cf0b"
@@ -9687,12 +9706,26 @@ ssr-types@^5.0.0, ssr-types@^5.5.61:
     "@types/yargs" "^13.0.4"
     egg "^2.0.0"
 
-ssr-webpack@^5.5.65:
-  version "5.5.65"
-  resolved "https://registry.nlark.com/ssr-webpack/download/ssr-webpack-5.5.65.tgz#8a174cbfc8de957152737f991ea26d55e0fd3801"
-  integrity sha1-ihdMv8jelXFSc3+ZHqJtVeD9OAE=
+ssr-types@^5.5.72:
+  version "5.5.72"
+  resolved "https://registry.nlark.com/ssr-types/download/ssr-types-5.5.72.tgz#994c91ece11f43bc7e452b38d85e3a38891628f3"
+  integrity sha1-mUyR7OEfQ7x+RSs42F46OIkWKPM=
   dependencies:
-    ssr-server-utils "^5.5.65"
+    "@midwayjs/faas-typings" "^2.7.0"
+    "@types/express" "^4.17.11"
+    "@types/koa" "^2.11.3"
+    "@types/node" "14"
+    "@types/tapable" "^1.0.6"
+    "@types/webpack" "^4.41.10"
+    "@types/yargs" "^13.0.4"
+    egg "^2.0.0"
+
+ssr-webpack@^5.5.74:
+  version "5.5.74"
+  resolved "https://registry.nlark.com/ssr-webpack/download/ssr-webpack-5.5.74.tgz?cache=0&sync_timestamp=1626442688241&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fssr-webpack%2Fdownload%2Fssr-webpack-5.5.74.tgz#4a2d46d341e538153ed903796c4e10c89a3673e8"
+  integrity sha1-Si1G00HlOBU+2QN5bE4QyJo2c+g=
+  dependencies:
+    ssr-server-utils "^5.5.74"
     webpack "^4.42.1"
     webpack-dev-server-ssr "^3.10.3"
 
@@ -9701,15 +9734,15 @@ ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
   resolved "https://registry.nlark.com/ssr-window/download/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
   integrity sha1-/VuCgBY4lD4MxwTEaRgBQ1r3rDc=
 
-ssr@^5.0.0:
-  version "5.5.65"
-  resolved "https://registry.nlark.com/ssr/download/ssr-5.5.65.tgz#29dd14fb9e5d8dd01f2134d00075e42885b75e28"
-  integrity sha1-Kd0U+55djdAfITTQAHXkKIW3Xig=
+ssr@^5.5.74:
+  version "5.5.74"
+  resolved "https://registry.nlark.com/ssr/download/ssr-5.5.74.tgz?cache=0&sync_timestamp=1626443484838&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fssr%2Fdownload%2Fssr-5.5.74.tgz#b42941a0229740164f4190fa7490dcc26d0b1bac"
+  integrity sha1-tClBoCKXQBZPQZD6dJDcwm0LG6w=
   dependencies:
     ora "^4.0.4"
     shelljs "^0.8.3"
-    ssr-server-utils "^5.5.65"
-    ssr-types "^5.5.61"
+    ssr-server-utils "^5.5.74"
+    ssr-types "^5.5.72"
     yargs "^13.2.4"
 
 ssri@^6.0.1:
